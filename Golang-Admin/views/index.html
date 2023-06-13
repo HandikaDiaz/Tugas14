@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="public/css/form-blog.css">
+        <link rel="stylesheet" href="public/css/index.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-black">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img class="icon-img" src="public/Image/JR.jpg"/>
+                </a>
+                <button 
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarToggle01"
+                aria-control="navbarToggle01"
+                aria-expanded="false"
+                aria-label="Toggle Navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a 
+                            class="nav-link active text-blue fw-bold box-shadow" 
+                            arial-current="page" 
+                            href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a 
+                            class="nav-link text-white fw-bold" 
+                            href="blog"
+                            arial-current="page">Member</a>
+                        </li>
+                        <li class="nav-item">
+                            <a 
+                            class="nav-link text-white fw-bold" 
+                            href="form-blog"
+                            arial-current="page">Add Member</a>
+                        </li>
+                    </ul>
+                    <a style="background-color: white; color: black; font-weight: bold;" href="contact" class="btn bg-blue px-2">Contact Me</a>
+                </div>
+            </div>
+        </nav>
+
+        {{if .FlashMassage}} {{if .FlashStatus}}
+
+        <div class="alert alert-success alert-dismissable fade show" role="alert">
+            <strong>{{.FlashMessage}}</strong>
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close">
+            </button>
+        </div>
+
+        {{else}}
+
+        <div class="alert alert-danger alert-dismissable fade show" role="alert">
+            <strong>{{.FlashMessage}}</strong>
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close">
+            </button>
+        </div>
+
+        {{end}} {{end}}
+
+        <div class="d-flex container bg-step bg-white container-sm responsive" style="box-shadow: aqua 5px 5px 15px,red -5px -5px 15px ;">
+            <div>
+                <h1 class="text-red">Charlotte</h1>
+                <p>Charlotte takes place in an alternate reality where a short-period comet called Charlotte passes near Earth once every 75 years. As this happens, it spreads dust onto the Earth, which causes a small percentage of preadolescent children who inhale the dust to manifest superhuman abilities upon reaching puberty. In Japan the story follows the protagonist Yuu Otosaka, a boy who awakens the ability to temporarily possess another person for five seconds.</p>
+                <div class="mt-5">
+                    <a href="https://www.instagram.com/">
+                        <img
+                            style="width: 5%;"
+                            src="public/Image/IG.png"
+                        />
+                    </a>
+                    <a href="https://www.facebook.com/">
+                        <img
+                            style="width: 5%;"  
+                            src="public/Image/FB.png"
+                    />
+                    </a>
+                    <a href="https://www.twitter.com/">
+                        <img
+                            style="width: 5%;"
+                            src="public/Image/TWT.png"
+                        />
+                    </a>
+                    <a href="https://www.twitter.com/">
+                        <img
+                        style="width: 5%;"
+                        src="public/Image/YT.png"
+                        />
+                    </a>
+                </div>
+            </div>
+            <div class="card-container">
+                <img class="bg-img" src="public/Image/sad.jpg"/>
+                <center>
+                    <h2 class="text-card1">Charlotte</h2>
+                    <p class="text-card2">King of Sadboy</p>
+                </center>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 150px; " class="member-tittle1 d-flex justify-content-center align-items-center">
+            ---> My Project <---
+        </h2>
+        {{range $index, $data := .Blogs}}
+        <div>
+            <div style="padding-top: 20px; " class="bg-white">
+                <div class="container bg-steps bg-white container-sm responsive" style="box-shadow: rgb(109, 109, 109) 5px 5px 15px,black -5px -5px 15px ;">
+                        <img style="width: 100%; border-radius: 10px;" src="public/Image/{{$data.Image}}"/>
+                    <div class="blog-content">
+                        <div style="margin-left: 0;" class="btn-group">
+                        </div>
+                        <h1 class="ms-4 py-4">
+                          <a style="text-decoration: none; color: darkred;" href="blog-detail/{{$data.ID}}" target="_blank"
+                            >{{$data.Title}}</a
+                            >
+                        </h1>
+                        <p class="ms-4" style="font-size: 20px;">
+                            {{$data.Description}}
+                        </p>
+                        <div class="ms-4 detail-blog-content" style="font-size: 13px;">
+                            {{$data.StartDate}} - {{$data.EndDate}}  | {{$data.Author}}
+                        <div class="d-flex" style="padding-top: 30px; margin-left: 100px;">
+                            <div class="d-flex" >
+                                
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            {{end}}
+        <div style="padding-bottom: 100px;"></div>  
+
+        <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+        crossorigin="anonymous"></script>
+    </body>
+</html>

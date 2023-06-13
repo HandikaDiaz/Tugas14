@@ -1,0 +1,110 @@
+body {
+    background-color: gray;
+    height: 100vh;
+}
+
+.bg-step {
+    display: flex;
+    width: 1000px; 
+    border: 1px white; 
+    color: black; 
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 50px gray;
+}
+
+.bg-steps {
+    width: 500px; 
+    border: 1px white; 
+    color: black; 
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 50px gray;
+}
+
+.bg-gray {
+    background-color: ;
+}
+
+.bg-img {
+    width: 150%;
+    border: 1px solid white;
+    padding: 0 0 50px 0;
+    margin-left: 30px;
+    background-color: lightgray;
+    border-radius: 7px;
+    box-shadow: 0 0 25px black;
+}
+
+.card-container {
+    width: 150%;
+    margin-right: 130px;
+    margin-top: 4px;
+}
+
+.text-card1{
+    margin-top: -53px; 
+    margin-right: -160px; 
+    color: brown;
+    font-size: 30px;
+}
+
+.text-card2 {
+    margin-top: -15px;
+    margin-right: -165px;
+    font-size: 15px;
+}
+
+.text-red {
+    color: darkred;
+    text-shadow: aqua 5px 5px 15px, blue -5px -5px 10px; 
+}
+
+.member-tittle1 {
+   background-color: white;
+}
+
+.list-item {
+    width: 30%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: lightgray;
+}
+
+.list-item img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .responsive {
+        flex-direction: column;
+    }
+
+    .card-container {
+        width: 50%;
+        margin: 40px -50px 10px 45px;
+    }
+
+    .list-item {
+        width: 75%;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid black;
+        border-radius: 8px;
+        background-color: lightgray;
+    }
+
+    .list-blog-item {
+        margin-left: 100px;
+    }
+    
+}
+
+

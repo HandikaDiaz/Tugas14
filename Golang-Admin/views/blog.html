@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>Blog</title>
+        <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="public/css/form-blog.css">
+        <link rel="stylesheet" href="public/css/index.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-black">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img class="icon-img" src="public/Image/JR.jpg"/>
+                </a>
+                <button 
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarToggle01"
+                aria-control="navbarToggle01"
+                aria-expanded="false"
+                aria-label="Toggle Navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a 
+                            class="nav-link text-white fw-bold box-shadow" 
+                            arial-current="page" 
+                            href="/">Home</a>
+                        </li>
+                        <<li class="nav-item">
+                            <a 
+                            class="nav-link text-blue fw-bold" 
+                            href="blog"
+                            arial-current="page">Member</a>
+                        </li>
+                        <li class="nav-item">
+                            <a 
+                            class="nav-link text-white fw-bold" 
+                            href="form-blog"
+                            arial-current="page">Add Member</a>
+                        </li>
+                    </ul>
+                    <a style="background-color: white; color: black; font-weight: bold;" href="contact" class="btn bg-blue px-2">Contact Me</a>
+                </div>
+            </div>
+        </nav>
+
+        <div style="margin-top: 50px; text-align: end; margin-right: 150px;;">
+            <a
+            class="text-black fw-bold "
+            style="
+                text-shadow: black 0 0 3px;
+                border-radius: 10px;
+                background-color: white;
+                padding: 10px 20px;
+                text-decoration: none;"
+            href="/form-blog"
+            >Add Project
+            </a> 
+        </div>
+
+        <div>
+            {{range $index, $data := .Blogs}}
+            <div>
+                <div class="d-flex container bg-step bg-white container-sm responsive" style="box-shadow: aqua 5px 5px 15px,red -5px -5px 15px ;">
+                    
+                        <img style="box-shadow: black 0 0 13px; width: 350px; height: 235px;border-radius: 10px;" src="public/Image/{{$data.Image}}"/>
+                    
+                    <div class="blog-content">
+                        <div style="margin-left: 310px;" class="btn-group">
+                        </div>
+                        <h1 class="ms-4 fw-bold">
+                          <a style="text-decoration: none; color: darkred;" href="blog-detail/{{$data.ID}}" target="_blank"
+                            >{{$data.Title}}</a
+                            >
+                        </h1>
+                        <p class="ms-4" style="font-size: 20px; font-weight: bolds;">
+                            {{$data.Description}}
+                        </p>
+                        
+                        <div class="d-flex">
+                            <div class="ms-4 detail-blog-content" style="font-size: 13px;">
+                            {{$data.StartDate}} - {{$data.EndDate}} | {{$data.Author}}
+                            </div>
+
+                        </div>
+                        <div style="margin-left: 25px; margin-top: 50px; margin-bottom: -50px;">
+                            {{if $data.Animal}}
+                            <img style="width: 4%;" src="public/Image/animal.png">
+                            {{end}}
+                            {{if $data.Human}}
+                            <img style="width: 4%;" src="public/Image/human.png">
+                            {{end}}
+                            {{if $data.Demon}}
+                            <img style="width: 4%;" src="public/Image/demon.png">
+                            {{end}}
+                            {{if $data.Robot}}
+                            <img style="width: 4%;" src="public/Image/robot.png">
+                            {{end}}
+                        </div>
+                        <div class="d-flex " style="margin-left: 250px; padding-top: 45px;">
+                                <div style="margin-left: -227px; color: gray;">
+                                    Duration: {{$data.Duration}}
+                                </div>
+                            <div class="d-flex" style="margin-left: 210px; margin-top: 13px;">
+                            <form
+                                action= "/blog-edit/{{$data.ID}}"
+                                method= "GET"
+                                style= "text-decoration: none; margin-left: 10px;"
+                                >
+                                    <input
+                                    type= "submit"
+                                    class= "btn-delete fw-bold"
+                                    value= "Edit Post"
+                                    style= "text-shadow: black 0 0 4px; background-color: gray; border: none; border-radius: 8px; padding: 5px 20px; color: white; cursor: pointer;"
+                                    />
+                            </form>
+
+                            <form
+                                action= "/blog-delete/{{$data.ID}}"
+                                method= "POST"
+                                style= "text-decoration: none; margin-left: 10px;"
+                                >
+                                    <input
+                                    type= "submit"
+                                    class= "btn-delete fw-bold"
+                                    value= "Delete Post"
+                                    style= "text-shadow: black 0 0 3px; background-color: red; border: none; border-radius: 8px; padding: 5px 10px; color: white; cursor: pointer;"
+                                    />
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                {{end}}
+        </div>
+        
+        <div style="padding-bottom: 100px;"></div>  
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<div id="content" class="pt-5">
+            <div style="width: 25%;" class="container responsive border">
+                <div>
+                    <div class="blog-image margin pt-4 ps-4">
+                        <img src="public/Image/zoro.jpg" alt="blog_img"/>
+                    </div>
+                    <div class="pt-3">
+                        <div class="text-box fs-6">
+                            <h1 class="fs-5">
+                                <a 
+                                style="color: red;" 
+                                href="blog-detail.html" 
+                                target="_blank">Zoro is a user of 3 Swords</a>
+                            </h1>
+                            <div style="color: gray; font-size: 15px;">Duration :</div>
+                        <div> 1 Month </div>
+                            <div class="detail-blog-content">
+                                20 May 2020 20:20 WIB - Roronoa Zoro
+                            </div>
+                            <div>Ability</div>
+                            <img class="img-icon-sword" src="public/Image/sword.png">
+                            <p>
+                                Zoro has a stern, serious, and distanced personality, but unlike Robin, he often reacts in a goofy and exaggerated comic style due to his short-tempered and impatient attitude.                          </p>
+                            <a href="https://www.instagram.com/">
+                                <img
+                                style="
+                                width: 5%;"
+                                src="Image/IG.png"
+                                />
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <img
+                            style="
+                            width: 5%;"
+                            src="Image/FB.png"
+                            />
+                            </a>
+                            <a href="https://www.twitter.com/">
+                                <img
+                                style="
+                                width: 5%;"
+                                src="Image/TWT.png"
+                                />
+                            </a>
+                            <a href="https://www.twitter.com/">
+                                <img
+                                style="
+                                width: 5%;"
+                                src="Image/YT.png"
+                                />
+                            </a>
+                            <div style="text-align: center;" class="d-column">
+                                <button class="bg-danger px-4">Edit Post</button>
+                                <buttom class="bg-gray px-4">Delete Post</buttom>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

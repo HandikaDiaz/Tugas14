@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Poppins:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Happy Monkey', cursive;
+    box-sizing: border-box;
+}
+
+.form-control {
+    background-color: rgba(0, 255, 255, 0.445);
+    font-weight: bold;
+}
+
+.edit {
+    width: 450px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+/* body {
+    background-color: aquamarine;
+} */
+
+.box-shadow {
+    text-shadow: 5px 5px 100px yellow;
+}
+
+.text-blue {
+    color:aqua !important;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.icon-img {
+    width: 70px;
+}
+
+.bt-blue {
+    background-color: rgb(8, 109, 109);
+}
+
+.text-aqua {
+    color: white;
+}
+
+
+.paddingstart {
+    padding-left: 58px;
+}
+
+.blog-image img{
+    height: 150px;
+}
+
+.img-icon-sword {
+    width: 50px;
+}
+
+.border {
+    width: 340px;
+}
+
+.img-icon {
+    width: 30px;
+}
+
+
+
+
